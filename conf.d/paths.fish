@@ -26,7 +26,7 @@ for file in "$fish/paths.d"/*
                 end
             end
         else
-            set -gx "$name" $$name $values
+            set -gx "$name" $values
         end
     end
 end
