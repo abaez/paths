@@ -18,7 +18,7 @@ switch "$FISH_VERSION"
         set -l real_home ~
 
         function -S _paths_replace_tilde
-            printf "%s\n" $argv | sed "s,~,$real_home,g"
+            printf "%s\n" $argv | sed "s,~,$real_home,g;s,\$HOME,$real_home,g"
         end
 
         for file in "$paths_config"/*
